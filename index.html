@@ -1,16 +1,24 @@
 <html>
+
 <body>
 <h1>我叫<span id="name"></span></h1>
 <p>我的学号是<span id="studentnumber"></span>
 <img src="matrix.png" style="border-radius:10px 20px 30px 40px">
 <img id="logo" src="1.jpg"  style="border-radius:10px 20px 40px 80px">
+=======
+<BODY>
+<h1>我叫<span id="name"></h1>
+<p>我的学号是<span id="studentnumber">、</span>
+  <img src="matrix.png"/>
+  <img id="logo" src="1.png" />
+
 </p>
 <script scr="jquery-3.4.1.js"></script>
 <script>
 $(function(){
-        $.get("data.json",function(result){
-            $("#myname").text(result.name);
-            $("#mynumber").text(result.studentnumber);
+        $.get("/data.json",function(result){
+            $("#name").text(result.name);
+            $("#studentnumber").text(result.studentnumber);
         })
     })
 </script>
