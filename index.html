@@ -4,6 +4,15 @@
 <p>我的学号是<span id="studentnumber">18002090237</span>
 <img src="matrix.png"/>
 </p>
+<script scr="jquery-3.4.1.js"></script>
+<script>
+(function(){
+    $.get("./data.json",function(result){
+            $("#name").text(result.name);
+            $("#studentnumber").text(result.studentnumber);
+    });
+    
+})
 
 </body>
 </HTML>
