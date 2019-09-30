@@ -15,8 +15,7 @@ $(function(){
             $("#name").text(result.name);
             $("#studentnumber").text(result.studentnumber);
         })
-    })
-
+    
     $("#but").click(function(){
       $.get("./data1.json",function(result){
             $("#name").text(result.name);
@@ -24,7 +23,7 @@ $(function(){
         });
 
     })
-
+})
 </script>
 </body>
 </html>
