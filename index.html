@@ -6,16 +6,24 @@
 <p>我的学号是<span id="studentnumber"></span>
   <img src="matrix.png"/>
   <img id="logo" src="1.png" />
-
+<input type="button">下一个</input>
 </p>
 <script scr="jquery-3.4.1.js"></script>
 <script>
 $(function(){
-        $.get("/data.json",function(result){
+        $.get("./data.json",function(result){
             $("#name").text(result.name);
             $("#studentnumber").text(result.studentnumber);
         })
     })
+
+    $("#but").click(function(){
+      $.get("./data.json",function(result){
+            $("#name").text(result.name);
+            $("#studentnumber").text(result.studentnumber);
+        });
+    })
+
 </script>
 </body>
 </html>
