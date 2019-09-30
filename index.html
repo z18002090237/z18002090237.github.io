@@ -1,29 +1,27 @@
 <html>
-<head></head>
+    <head></head>
 <body>
-
-<h1>我叫<span id="name"></h1>
-<p>我的学号是<span id="studentnumber"></span>
-  <img src="matrix.png"/>
-  <img id="logo" src="1.png" />
-  <button id="but">下一个</button>
-</p>
-<script scr="jquery-3.4.1.js"></script>
-<script>
-$(function(){
-        $.get("./data.json",function(result){
-            $("#name").text(result.name);
-            $("#studentnumber").text(result.studentnumber);
+<H1>我叫<span id="myname"></span></h1>
+    <p>我的学号是<span id ="mynumber"></span>
+    </p>
+    <button id="btu">下一个</button><br>
+    <img src="matrix.png" style="border-radius: 40px 40px 40px 40px">
+    <img src="1.jpg" alt="">
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+    $(function(){
+        $.get("data.json",function(result){
+            $("#myname").text(result.myname);
+            $("#mynumber").text(result.mynumber);
         })
-    
-    $("#but").click(function(){
-      $.get("./data1.json",function(result){
-            $("#name").text(result.name);
-            $("#studentnumber").text(result.studentnumber);
-        });
 
+        $("#btu").click(function(){
+            $.get("data1.json",function(result){
+            $("#myname").text(result.myname);
+            $("#mynumber").text(result.mynumber);
+        });
     })
 })
-</script>
+    </script>
 </body>
 </html>
